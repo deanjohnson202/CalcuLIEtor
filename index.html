@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CalcuLIEtor</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="src/puzzles.js"></script>
+  <script defer src="src/engine.js"></script>
+  <script defer src="src/ui.js"></script>
+</head>
+<body>
+  <main>
+    <h1>CalcuLIEtor</h1>
+    <p class="intro">Make the display answer the clue. Discover what each live key does; its meaning never changes.</p>
+    <p id="clue" class="clue" aria-live="polite"></p>
+    <p id="progress" class="progress"></p>
+    <div id="machine" class="machine">
+    <section id="calculator" class="calculator" aria-label="Calculator">
+      <output id="display" aria-live="polite" aria-label="Calculator display">0</output>
+      <div id="keypad" class="keypad">
+        <button class="control clear-key" data-visible-key="C">C</button>
+        <button class="operator" data-visible-key="÷">÷</button>
+        <button data-visible-key="7">7</button>
+        <button data-visible-key="8">8</button>
+        <button data-visible-key="9">9</button>
+        <button class="operator" data-visible-key="×">×</button>
+        <button data-visible-key="4">4</button>
+        <button data-visible-key="5">5</button>
+        <button data-visible-key="6">6</button>
+        <button class="operator" data-visible-key="-">-</button>
+        <button data-visible-key="1">1</button>
+        <button data-visible-key="2">2</button>
+        <button data-visible-key="3">3</button>
+        <button class="operator" data-visible-key="+">+</button>
+        <button class="wide" data-visible-key="0">0</button>
+        <button class="wide equals" data-visible-key="=">=</button>
+      </div>
+    </section>
+    <aside class="paper" aria-label="Current puzzle tape">
+      <h2>Tape</h2>
+      <ol id="tape" tabindex="0" aria-label="Key presses and results"></ol>
+    </aside>
+    </div>
+    <p id="status" class="status" role="status"></p>
+    <button id="reset" class="reset">Reset</button>
+    <button id="restart" class="reset" hidden>Play again</button>
+    <p class="help">Keyboard: digits, + − *, Enter (=), c (C). Grey keys are asleep.<br>Reset restores the starting display and keeps your tape. ERR? Use Reset.</p>
+  </main>
+</body>
+</html>

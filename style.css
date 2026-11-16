@@ -1,0 +1,33 @@
+:root { font-family: Arial, sans-serif; color: #30342f; background: #f3f1eb; }
+* { box-sizing: border-box; }
+body { margin: 0; min-height: 100svh; display: grid; place-items: center; padding: 24px 16px; }
+main { width: min(100%, 660px); text-align: center; }
+.machine { display: grid; grid-template-columns: minmax(0, 340px) minmax(0, 1fr); gap: 20px; align-items: start; }
+.paper { min-width: 0; background: #fffdf5; border: 1px solid #ded9c9; box-shadow: 0 3px 6px #30342f10; text-align: left; }
+.paper h2 { margin: 12px; font-size: .8rem; font-weight: normal; color: #65695f; }
+#tape { height: 310px; max-height: 310px; overflow: auto; list-style: none; margin: 0; padding: 0 12px 12px; font: .75rem/2 'Courier New', monospace; }
+#tape li { white-space: pre-wrap; overflow-wrap: anywhere; }
+#tape .divider { border-top: 1px solid #b9b4a5; margin: 10px 0; }
+.clear-key { grid-column: span 3; }
+@media (max-width: 580px) { main { max-width: 340px; } .machine { grid-template-columns: minmax(0, 1fr); } #tape { height: 180px; } }
+h1 { font-size: 1rem; letter-spacing: .08em; margin: 0 0 12px; }
+.intro, .help { color: #65695f; font-size: .85rem; line-height: 1.5; }
+.clue { font-size: 1.3rem; min-height: 3.2em; display: grid; place-items: center; margin-bottom: 0; }
+.progress { color: #747b6c; font-size: .75rem; letter-spacing: .4em; margin: 8px 0 20px; }
+.calculator { padding: 20px; border: 1px solid #b7bab0; border-radius: 16px; background: #d9dcd2; box-shadow: 0 5px 0 #aeb3a7, 0 12px 24px #30342f16; }
+output { display: block; width: 100%; overflow-x: auto; padding: 18px 12px; margin-bottom: 20px; border: 2px solid #929d84; border-radius: 5px; background: #c5d0b6; color: #283325; text-align: right; font: 2rem/1.2 'Courier New', monospace; min-height: 78px; }
+.keypad { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; }
+button { font: inherit; cursor: pointer; touch-action: manipulation; }
+.keypad button { min-height: 52px; border: 1px solid #aaaFa4; border-radius: 6px; background: #f7f7f2; color: #30342f; box-shadow: 0 3px 0 #adb1a6; font-size: 1.3rem; }
+.keypad .operator, .keypad .control { background: #c0c6b9; }
+.keypad .equals { background: #737e69; color: white; border-color: #65715c; }
+.wide { grid-column: span 2; }
+button:focus-visible { outline: 3px solid #445e88; outline-offset: 4px; }
+.keypad button:active:not(:disabled) { transform: translateY(2px); box-shadow: none; }
+button:disabled { cursor: default; }
+.keypad button:disabled { background: #d3d5ce; color: #91958b; border-color: #c0c3b9; box-shadow: none; }
+.calculator.success output { background: #d5e6c7; border-color: #587149; }
+.status { min-height: 1.5em; font-size: .9rem; margin: 20px 0 8px; }
+.reset { padding: 10px 24px; border: 1px solid #b9bdb2; border-radius: 5px; background: transparent; color: inherit; }
+.help { margin-top: 24px; font-size: .75rem; }
+[hidden] { display: none !important; }

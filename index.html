@@ -12,7 +12,7 @@
 <body>
   <main>
     <h1>CalcuLIEtor</h1>
-    <p class="intro">Make the display answer the clue. Discover what each live key does; its meaning never changes.</p>
+    <p class="intro">Make the display answer the clue, then submit it. Discover what each live key does; its meaning never changes.</p>
     <p id="clue" class="clue" aria-live="polite"></p>
     <p id="progress" class="progress"></p>
     <div id="machine" class="machine">
@@ -43,9 +43,11 @@
     </aside>
     </div>
     <p id="status" class="status" role="status"></p>
+    <button id="submit" class="reset submit">Submit</button>
     <button id="reset" class="reset">Reset</button>
-    <button id="restart" class="reset" hidden>Play again</button>
-    <p class="help">Keyboard: digits, + − *, Enter (=), c (C). Grey keys are asleep.<br>Reset restores the starting display and keeps your tape. ERR? Use Reset.</p>
+    <ol id="summary" class="summary" hidden></ol>
+    <p class="help">Keyboard: digits, + − *, Enter (=), c (C). Grey keys are asleep.<br>Submit when the display answers the clue; a wrong answer sends the display back to the start. Reset does the same and keeps your tape. ERR? Use Reset.<br>Progress is saved in this browser.</p>
+    <button id="restart" class="restart">Start over</button>
   </main>
 </body>
 </html>

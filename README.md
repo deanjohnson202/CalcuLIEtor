@@ -73,4 +73,4 @@ The tests include a breadth-first solver run against the real engine. It checks 
 ## History
 
 - `archive/Plan.md` is the original design handoff. The game has moved on from it: that plan remapped digits and operators on a working calculator.
-- The `arbitrary-keys` branch holds an earlier version in which key functions had no relationship to their labels.
+- Commit `ea609cc` is an earlier version in which key functions had no relationship to their labels.
